@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script src="script.js" type="module"></script>
+</head>
+<body class='font-medium font-[Helvetica] flex flex-row text-gray-800'>
+  <table class="h-[749px] w-[519px] m-1 table-fixed">
+    <tr class="border-2 border-black border-b-0 h-24">
+      <td class="border-r-2 border-black px-auto text-center">
+        <div class="flex flex-col">
+          <span class="text-7xl" id="line_number"></span>
+          <span id="line_type"></span>
+        </div>
+      </td>
+      <td class="px-2 w-[63%] align-top">
+        <div class="flex flex-col justify-between h-full">
+          <div>
+            <div class="underline text-xl font-semibold mb-1" id="stop_name"></div>
+            <div class="text-sm"><span class="font-bold">KIERUNEK: </span><span id="destination"></span></div>
+          </div>
+          <div class="text-xs italic" id="top_text"></div>
+        </div>
+      </td>
+    </tr>
+    <tr class="border-2 border-black h-full align-top">
+      <td class="border-r-2 border-black text-xs">
+        <p>Czas *</p>
+        <table class="mx-2"><tbody id="route_data"></tbody></table>
+        <p class="mt-3 mx-2">* - maksymalny, rozkładowy czas przejazdu</p>
+      </td>
+      <td class="min-h-full p-0">
+        <table class="w-full border-b-2 border-black">
+          <tbody id="schedule">
+            <tr class="border-b-2 border-black"><th colspan="2">Cały tydzień</th></tr>
+          </tbody>
+        </table>
+        <div class="text-sm">
+          <p class="mb-2">Zakłócenia w ruchu powodują zmiany czasów odjazdów.</p>
+          <p id="bottom-text"></p>
+        </div>
+      </td>
+    </tr>
+  </table>
+  
+  <div class="m-5"> <!-- panel ustawien -->
+    <div>
+      <a id="reset" class="bg-green-700 p-3 rounded-xl hover:bg-green-500 hover:text-gray-800 transition-all cursor-pointer text-gray-200">PRZEŁADUJ</a>
+      <a id="download" class="bg-blue-600 p-3 rounded-xl hover:bg-blue-400 hover:text-gray-800 transition-all text-gray-200 cursor-pointer">POBIERZ</a>
+      <label for="upload-data" class="bg-lime-700 hover:bg-lime-500 hover:text-gray-800 text-gray-200 p-3 transition-all rounded-xl cursor-pointer">ZAŁADUJ DANE LINII</label>
+    </div>
+    <form class="my-6" id="card_customiser">
+      <div class="my-4">
+        <input id="upload-data" type="file" name="data" accept=".json" class="hidden" />
+      </div>
+      <div id="stop_selector"></div>
+    </form>
+  </div>
+
+  <div class="hidden" id="template">
+    <table>
+      <tr class="route_item">
+        <td class="border-r-2 border-black text-right"><span class="mr-1 stop_time"></span></td>
+        <td>
+          <span class="relative inline-block bg-black rounded-lg h-[8px] w-[8px] -left-[6px] -mr-2.5"></span>
+          <span class="p-0.5 stop_name"></span>
+        </td>
+      </tr>
+      <tr class="schedule-row border-b-2 border-gray-500 text-sm"><th class="w-5 border-r-2 border-black"></th><td></td></tr>
+    </table>
+    <div class="flex items-center stop-select">
+      <input id="stop_{stop}" value="{stop}" name="stop" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600" />
+      <label for="stop_{stop}" class="ml-3 block text-sm font-medium leading-6 text-gray-900"></label>
+    </div>
+  </div>
+</body>
+</html>

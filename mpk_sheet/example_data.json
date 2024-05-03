@@ -1,0 +1,82 @@
+{
+  "lineNumber": "567",
+  "schedule": [
+    "4:00",
+    "4:40",
+    "5:15",
+    "5:53",
+    "6:15",
+    "7:20",
+    "9:00A",
+    "10:05",
+    "11:10",
+    "12:20",
+    "13:20",
+    "14:25",
+    "15:30A",
+    "16:45A",
+    "18:00",
+    "19:05",
+    "20:36",
+    "21:00",
+    "23:00"
+  ],
+  "route": [
+    {
+      "name": "Bronowice Małe",
+      "time": 0
+    },
+    {
+      "name": "Azory",
+      "time": 3
+    },
+    {
+      "name": "Krowodrza Górka P+R",
+      "time": 6
+    },
+    {
+      "name": "Opolska Estakada",
+      "time": 9
+    },
+    {
+      "name": "Bora-Komorowskiego",
+      "time": 13
+    },
+    {
+      "name": "Wiślicka",
+      "time": 16
+    },
+    {
+      "name": "Stella-Sawickiego",
+      "time": 20
+    },
+    {
+      "name": "M1 Nowohucka",
+      "time": 23
+    },
+    {
+      "name": "Podgórze SKA",
+      "time": 29
+    },
+    {
+      "name": "Łagiewniki",
+      "time": 34
+    },
+    {
+      "name": "Norymberska",
+      "time": 37
+    },
+    {
+      "name": "Ruczaj",
+      "time": 38
+    },
+    {
+      "name": "Czerwone Maki P+R",
+      "time": 41
+    }
+  ],
+  "bottomText": "A - jedzie z 10-minutowym opóźnieniem",
+  "topText": "Linia specjalnie przygotowana dla demonstracji",
+  "lineType": "linia przykładowa",
+  "lineTypeColor": "pink-600"
+}
